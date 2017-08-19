@@ -9,6 +9,16 @@ namespace VideoEncoderSample
         public void OnVideoEncoded(object source, VideoEventArgs args)
         {
             Console.WriteLine("Sending email ..." + args.Video.Title);
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+        
+            }
+           
         }
     }
 }
